@@ -5,7 +5,13 @@ def func_constaant(values):
 lst = [1,2,3]
 print(func_constaant(lst))
 
+#----------------------------------
 # O(n) Linear
+def func_linear(lst):
+      for val in lst:
+            print(val)
+
+print(func_linear(lst))
 
 
 #O(n^2) Quadratic
