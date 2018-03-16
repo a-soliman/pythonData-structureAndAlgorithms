@@ -13,5 +13,11 @@ def func_linear(lst):
 
 print(func_linear(lst))
 
-
+#----------------------------------
 #O(n^2) Quadratic
+def func_quadratic(lst):
+      for val1 in lst:
+            for val2 in lst:
+                  print (val1, val2)
+
+print(func_quadratic(lst))
