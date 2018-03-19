@@ -38,4 +38,16 @@ def is_anagram(str1, str2):
 s1 = 'clint eastwood'
 s2 = 'old west action'
 
-print('is_anagram:\n {} || {}. = '.format(s1, s2), is_anagram(s1, s2))
+print('1- is_anagram:\n {} || {}. = '.format(s1, s2), is_anagram(s1, s2))
+
+#=======================================================================================
+
+# Array Pair Sum
+
+'''
+Given an int arry, output all the unique pairs that sum up to a specific value k.
+
+EX:
+      pair_sum([1,3,2,2], 4)
+      will return 2 pairs (1,3), (2,2)
+'''
