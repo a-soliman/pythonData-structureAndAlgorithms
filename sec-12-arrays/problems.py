@@ -76,8 +76,9 @@ def arry_pair_sum(arr, value):
                         result.append([val1, val2])
       return result
 
-
-print(arry_pair_sum([1,3,2,2,0],4))
+arr = [1,3,2,2,0]
+sum = 4
+print('2- pair_sum : ', arry_pair_sum( arr,sum))
 
 #=======================================================================================
 
@@ -99,7 +100,7 @@ def finder1(arr1, arr2):
             if num not in arr2:
                   return num
 
-print(finder1([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
+print('3- Find the missing element: ', finder1([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
 
 def finder2(arr1, arr2):
       hash = {}
@@ -114,7 +115,7 @@ def finder2(arr1, arr2):
             if num not in hash:
                   return num
 
-print(finder2([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
+print('4- Find the missing element: ', finder2([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
 
 #=======================================================================================
 
