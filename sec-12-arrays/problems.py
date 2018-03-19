@@ -51,3 +51,31 @@ EX:
       pair_sum([1,3,2,2], 4)
       will return 2 pairs (1,3), (2,2)
 '''
+
+def arry_pair_sum(arr, value):
+      hash = {}
+      result= []
+
+      for num in arr:
+            if num in hash:
+                  hash[num] += 1
+            else:
+                  hash[num] = 1
+      
+      for num in hash.keys():
+            if int(num) <= value and hash[num] > 0:
+                  val1 = int(num)
+                  remaind = value - val1
+                  print('val1 ', val1, 'remidnd: ', remaind)
+
+                  if remaind in hash and hash[remaind] > 0:
+                        val2 = remaind
+
+                        hash[val1] -= 1
+                        hash[val2] -= 1
+
+                        result.append([val1, val2])
+      return result
+
+
+print(arry_pair_sum([1,3,2,2,0],1))
