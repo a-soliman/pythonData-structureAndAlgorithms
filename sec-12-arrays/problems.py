@@ -66,7 +66,6 @@ def arry_pair_sum(arr, value):
             if int(num) <= value and hash[num] > 0:
                   val1 = int(num)
                   remaind = value - val1
-                  print('val1 ', val1, 'remidnd: ', remaind)
 
                   if remaind in hash and hash[remaind] > 0:
                         val2 = remaind
@@ -78,4 +77,4 @@ def arry_pair_sum(arr, value):
       return result
 
 
-print(arry_pair_sum([1,3,2,2,0],1))
+print(arry_pair_sum([1,3,2,2,0],4))
