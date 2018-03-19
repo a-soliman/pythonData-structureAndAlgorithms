@@ -115,3 +115,16 @@ def finder2(arr1, arr2):
                   return num
 
 print(finder2([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
+
+#=======================================================================================
+
+# Largest continuous Sum
+
+'''
+Given an array of integers (positive and negative) find the largest continuous sum.
+
+
+EX:
+      largest_cont_sum([1,2,-1,3,4,10,10,-10,-1])
+      output 29
+'''
