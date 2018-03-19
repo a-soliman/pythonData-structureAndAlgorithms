@@ -22,8 +22,14 @@ class DynamicArray(object):
             
             return self.arr[index]
 
-      
+      def append(self, value):
+            if self.len == self.capacity:
+                  self._resize(2 * self.capacity)
+            
+            self.arr[self.len] = value
+            self.len += 1
 
+      
 
 
 #return (cap * ctypes.py_object)()
