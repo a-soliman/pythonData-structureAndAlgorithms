@@ -29,7 +29,11 @@ class DynamicArray(object):
             self.arr[self.len] = value
             self.len += 1
 
-      
+      def make_array(self, cap):
+            return (cap * ctypes.py_object)()
+
+
+
 
 
 #return (cap * ctypes.py_object)()
