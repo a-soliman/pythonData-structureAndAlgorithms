@@ -16,6 +16,12 @@ class DynamicArray(object):
             self.arr = temp_arr
             self.capacity = new_cap
       
+      def getitem(self, index):
+            if index < 0 or index > self.len:
+                  return IndexError('index is out of range!')
+            
+            return self.arr[index]
+
       
 
 
