@@ -101,3 +101,17 @@ def finder1(arr1, arr2):
 
 print(finder1([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
 
+def finder2(arr1, arr2):
+      hash = {}
+
+      for num in arr2:
+            if num in hash:
+                  hash[num] += 1
+            else:
+                  hash[num] = 1
+            
+      for num in arr1:
+            if num not in hash:
+                  return num
+
+print(finder2([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
