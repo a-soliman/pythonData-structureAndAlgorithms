@@ -33,7 +33,16 @@ class DynamicArray(object):
             return (cap * ctypes.py_object)()
 
 
+new_arr = DynamicArray()
 
+new_arr.append(10)
+new_arr.append(11)
+new_arr.append(12)
+new_arr.append(13)
+new_arr.append(14)
 
+print(new_arr.capacity)
+print(new_arr.getitem(0))
+print(new_arr.getitem(1))
+print(new_arr.getitem(2))
 
-#return (cap * ctypes.py_object)()
