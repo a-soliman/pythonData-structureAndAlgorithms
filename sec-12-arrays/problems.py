@@ -141,4 +141,18 @@ def largest_cont_sum(arr):
 
       return max_sum
 
-print(largest_cont_sum([-10,2,-1,3,4,10,10,-10,-1]))
+print('5- Largest continuous Sum: ', largest_cont_sum([-10,2,-1,3,4,10,10,-10,-1]))
+
+#=======================================================================================
+
+# Reverse the sentence
+
+'''
+Given a string of words, reverse all the words, for example
+
+
+EX:
+      'This is the best'
+      output 'best the is This'
+'''
+
