@@ -166,4 +166,74 @@ def reverse_sentence(string):
       return new_st
 
 
-print(reverse_sentence('This is the best'))
+print('6- Reverse the sentence: ', reverse_sentence('This is the best'))
+
+
+#=======================================================================================
+
+# String Compression
+
+'''
+Given a string of the form 'AAAABBBBCCCCCDDEEEE' compress it to become 'A4B4C5D2E4'
+
+
+EX:
+      'AAAABBBBCCCCCDDEEEE'
+      output 'A4B4C5D2E4'
+'''
+
+def string_compression(string):
+      hash = {}
+      letter_set = set()
+      new_string = ''
+
+      for letter in string:
+            if letter in hash:
+                  hash[letter] += 1
+            else:
+                  hash[letter] = 1
+            letter_set.add(letter)
+      
+      for letter in string:
+            if not letter in new_string:
+                  new_string += letter
+                  new_string += str(hash[letter])
+      return new_string
+
+print('7- String Compression: ', string_compression('AAAABBBBCCCCCDDEEEE'))
+
+def string_compression_modified(string):
+      new_string= ''
+
+      count = 1
+      
+      for i in range(1, len(string)):
+            if string[i] == string[i-1]:
+                  count += 1
+            else:
+                  new_string += string[i-1]
+                  new_string += str(count)
+                  count = 1
+      new_string += string[-1]
+      new_string += str(count)
+
+      return new_string
+
+print('8- string_compression_modified: ', string_compression_modified('AAAABBBBCCCCCDDEEEE'))
+
+#=======================================================================================
+
+# Unique Characters in string
+
+'''
+Given a string determine if its compreised of all unique characters.
+
+
+EX:
+      'abcde'
+      output True
+EX:
+      'aabcde'
+      output: False
+'''
+
