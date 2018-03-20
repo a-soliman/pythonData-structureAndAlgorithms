@@ -237,3 +237,15 @@ EX:
       output: False
 '''
 
+def unique_str(string):
+      new_str = ''
+
+      for letter in string:
+            if letter in new_str:
+                  return False
+            else:
+                  new_str += letter
+      
+      return True
+
+print('9- Unique Characters in string: ', unique_str('abcde'))
