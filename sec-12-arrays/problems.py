@@ -156,3 +156,14 @@ EX:
       output 'best the is This'
 '''
 
+def reverse_sentence(string):
+      if len(string) == 0:
+            return
+      st = string.strip()
+      words = string.split()
+      words.reverse()
+      new_st = ' '.join(words)
+      return new_st
+
+
+print(reverse_sentence('This is the best'))
