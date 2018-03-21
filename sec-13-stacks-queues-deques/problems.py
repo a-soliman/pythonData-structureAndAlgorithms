@@ -33,6 +33,36 @@ def balance_check(string):
       return True
                                     
       
-
-
 print('13- balance_check: ', balance_check('([[]])'))
+
+#=======================================================================================
+
+# Queue out of two stacks
+
+'''
+given two stacks, implement your own queue
+
+'''
+
+class QueueOfTwoStacks(object):
+      def __init__(self):
+            self.inStack = []
+            self.outStack = []
+      
+      def inqueue(self, item):
+            self.inStack.append(item)
+      
+      def dequeue(self):
+            if not self.outStack:
+                  while self.inStack:
+                        self.outStack.append(self.inStack.pop())
+            
+            return self.outStack.pop()
+      
+
+q = QueueOfTwoStacks()
+for i in range(0, 5):
+      q.inqueue(i)
+
+for j in range(0,5):
+      print(q.dequeue())
