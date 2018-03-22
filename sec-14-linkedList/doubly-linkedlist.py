@@ -132,3 +132,16 @@ class LinkedList(object):
             new_node.next = after_node
 
             self.items.insert(index, new_node)
+
+
+ll = LinkedList()
+ll.addToTail(5)
+ll.addToHead(1)
+ll.addToTail(30)
+ll.addToHead(2)
+
+print(ll.getValues())
+ll.insertAtIndex(2, 'bb')
+print(ll.getValues())
+ll.insertAtIndex(5, 'jj')
+print(ll.getValues())
