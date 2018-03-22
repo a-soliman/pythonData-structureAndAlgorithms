@@ -15,3 +15,6 @@ class LinkedList(object):
       def clear(self):
                   self.head = self.tail = None
                   self.items = []
+
+      def size(self):
+            return len(self.items)
