@@ -29,3 +29,15 @@ class LinkedList(object):
                   values.append(item.value)
             
             return values
+
+      def addToHead(self, value):
+            newNode = Node(value)
+
+            if not self.head:
+                  self.tail = newNode
+            else:
+                  self.head.prev = newNode
+                  newNode.next = self.head
+
+            self.items.insert(0, newNode)
+            self.head = newNode
