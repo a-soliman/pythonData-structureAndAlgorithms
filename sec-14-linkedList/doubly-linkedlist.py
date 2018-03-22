@@ -18,3 +18,6 @@ class LinkedList(object):
 
       def size(self):
             return len(self.items)
+
+      def isEmpty(self):
+            return self.size() == 0
