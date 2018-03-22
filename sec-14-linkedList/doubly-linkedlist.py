@@ -54,3 +54,23 @@ class LinkedList(object):
             self.items.append(newNode)
             self.tail = newNode
       
+      def removeHead(self):
+            if self.size() == 0:
+                  return False
+            if self.size() == 1:
+                  value = self.head.value
+                  self.clear()
+                  return value
+            
+            if self.size() == 2:
+                  value = self.head.value
+                  self.tail.prev = None
+                  self.head = self.tail
+                  self.items.pop(0)
+                  return value
+            
+            old_head = self.head
+            self.head = self.head.next
+            self.head.prev = None
+            self.items.pop(0)
+            return old_head.value
