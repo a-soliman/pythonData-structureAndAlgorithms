@@ -110,3 +110,25 @@ class LinkedList(object):
             for index in range(len(self.items)):
                   if self.items[index].value == value:
                         return index
+
+      def insertAtIndex(self, index, value):
+            if index > len(self.items) -1:
+                  return False
+
+            if index == 0:
+                  return self.addToHead(value)
+
+            if index == len(self.items) -1:
+                  return self.addToTail(value)
+
+            new_node = Node(value)
+            before_node = self.items[index-1]
+            after_node = self.items[index]
+
+            before_node.next = new_node
+            new_node.prev = before_node
+
+            after_node.prev = new_node
+            new_node.next = after_node
+
+            self.items.insert(index, new_node)
