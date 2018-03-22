@@ -103,3 +103,10 @@ class LinkedList(object):
                         if item.value == value:
                               return True
             return False
+
+      def getIndex(self, value):
+            if not self.contains(value):
+                  return False
+            for index in range(len(self.items)):
+                  if self.items[index].value == value:
+                        return index
