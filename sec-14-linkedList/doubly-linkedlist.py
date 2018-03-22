@@ -41,3 +41,16 @@ class LinkedList(object):
 
             self.items.insert(0, newNode)
             self.head = newNode
+
+      def addToTail(self, value):
+            newNode = Node(value)
+
+            if not self.tail:
+                  self.head = newNode
+            else:
+                  self.tail.next = newNode
+                  newNode.prev = self.tail
+            
+            self.items.append(newNode)
+            self.tail = newNode
+      
