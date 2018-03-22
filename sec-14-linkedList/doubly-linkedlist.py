@@ -11,3 +11,7 @@ class LinkedList(object):
             self.head = None
             self.tail = None
             self.items = []
+
+      def clear(self):
+                  self.head = self.tail = None
+                  self.items = []
