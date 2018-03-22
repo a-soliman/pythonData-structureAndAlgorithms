@@ -21,3 +21,11 @@ class LinkedList(object):
 
       def isEmpty(self):
             return self.size() == 0
+
+      def getValues(self):
+            values = []
+
+            for item in self.items:
+                  values.append(item.value)
+            
+            return values
