@@ -74,3 +74,25 @@ class LinkedList(object):
             self.head.prev = None
             self.items.pop(0)
             return old_head.value
+
+      def removeTail(self):
+            if self.size() == 0:
+                  return False
+            
+            if self.size() == 1:
+                  value = self.tail.value
+                  self.clear()
+                  return value
+            
+            if self.size() == 2:
+                   value = self.tail.value
+                   self.tail = self.head
+                   self.head.next = None
+                   self.items.pop()
+                   return value
+            
+            old_tail = self.tail
+            self.tail = self.tail.prev
+            self.tail.next = None
+            self.items.pop()
+            return old_tail.value
