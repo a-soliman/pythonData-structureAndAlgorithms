@@ -96,3 +96,10 @@ class LinkedList(object):
             self.tail.next = None
             self.items.pop()
             return old_tail.value
+
+      def contains(self, value):
+            if self.size() > 0:
+                  for item in self.items:
+                        if item.value == value:
+                              return True
+            return False
