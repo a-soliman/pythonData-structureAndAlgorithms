@@ -5,3 +5,9 @@ class Node(object):
             self.value = value
             self.prev = None
             self.next = None
+
+class LinkedList(object):
+      def __init__(self):
+            self.head = None
+            self.tail = None
+            self.items = []
