@@ -93,3 +93,57 @@ def reverseList(node):
 
 print('19- reverse Singly LinkedList: ', reverseList(a1))
 
+
+#=======================================================================================
+
+# nth to the last node
+
+'''
+Given a singly LinkedList head, and an integer value n,
+return the nth to the last node in the linked list
+
+'''
+
+def nth_to_last(n, head):
+      current = head
+      nodes = []
+      while current:
+            nodes.append(current)
+            current = current.next
+      return nodes[-n]
+
+a = Node(1)
+b = Node(2)
+c = Node(3)
+d = Node(4)
+e = Node(5)
+
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+
+print('20- nth_to_last_1: ', nth_to_last(1,a).value)
+
+
+def nth_to_last_2(n, head):
+      l = head
+      r = head
+      current = head
+
+      # get the true r passed on n
+      while current:
+            n = n-1
+            if n == 0:
+                  r = current
+                  break
+
+            current = current.next
+      
+      while r:
+            if r.next == None:
+                  return l
+            l = l.next
+            r = r.next
+
+print('22- nth_to_last_2: ', nth_to_last_2(2,a).value)  
