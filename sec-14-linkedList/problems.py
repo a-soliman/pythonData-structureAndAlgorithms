@@ -39,7 +39,7 @@ c = Node(3)
 
 a.next = b
 b.next = c
-# c.next = a
+c.next = a
 
 print('17- cycleList: ', check_cycle(a))
 
@@ -56,3 +56,40 @@ def check_cycle_2(node):
       return False
 
 print('18- cycleList 2 : ', check_cycle_2(a))
+
+#=======================================================================================
+
+# Reverse singly - linkedlist in place
+
+'''
+Given a singly LinkedList, write a function that revereses it in place
+
+'''
+
+a1 = Node(1)
+a2 = Node(2)
+a3 = Node(3)
+a4 = Node(4)
+a5 = Node(5)
+
+a1.next = a2
+a2.next = a3
+a3.next = a4
+a4.next = a5
+
+def reverseList(node):
+
+      prev_node = None
+
+      while node != None:
+            next_node = node.next
+            node.next = prev_node
+            prev_node = node
+            node = next_node
+      
+      return node
+
+
+
+print(reverseList(a1))
+# print(a5.next.value)
