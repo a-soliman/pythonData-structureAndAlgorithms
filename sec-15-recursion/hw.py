@@ -72,3 +72,32 @@ def nth_fibonacci_2( n ):
             return nth_fibonacci_2(n-1) + nth_fibonacci_2(n-2)
 
 print('25- Fibonacci(10): ', nth_fibonacci_2(10))
+
+#=======================================================================================
+
+# recursive fibonacci_3
+
+'''
+using memoization
+
+'''
+
+def nth_fibonacci_3( n ):
+      fib_hash = {}
+      
+      def search(x):
+            if x in fib_hash:
+                  return fib_hash[x]
+            value = 0
+            if x == 1:
+                  value = 1
+            if x == 2:
+                  value = 2
+            if x > 2:
+                  value = search(x-1) + search(x-2)
+                  fib_hash[x] = value
+            return value
+      search(n)
+      return fib_hash[n]
+
+print('26- Fibonacci_with_memoization(100): ', nth_fibonacci_3(100))
