@@ -51,5 +51,6 @@ def nth_fibonacci( n ):
       return fibonacci[-1]
 
 
-for x in range(0, 11):
-      print('24- Fibonacci: ', x, ' - ', nth_fibonacci(x))
+print('24- Fibonacci(50): ', nth_fibonacci(50))
+
+
