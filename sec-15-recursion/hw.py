@@ -53,4 +53,22 @@ def nth_fibonacci( n ):
 
 print('24- Fibonacci(50): ', nth_fibonacci(50))
 
+#=======================================================================================
 
+# recursive fibonacci_2
+
+'''
+
+
+'''
+
+def nth_fibonacci_2( n ):
+      if n == 1:
+            return 1
+      if n == 2:
+            return 1
+      
+      if n > 2:
+            return nth_fibonacci_2(n-1) + nth_fibonacci_2(n-2)
+
+print('25- Fibonacci(10): ', nth_fibonacci_2(10))
