@@ -22,3 +22,8 @@ class BST(object):
                   else:
                         return self.right.insert
       
+      def getSmallestValue(self):
+            if self.left == None:
+                  return self.value
+            return self.left.getSmallestValue()
+      
