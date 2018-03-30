@@ -32,3 +32,31 @@ class BST(object):
                   return self.value
             return self.right.getGreatestValue()
       
+      def listValues(self, order):
+            values = []
+
+            def traverse(node, order):
+                  if order == 'in-order':
+                        if node.left:
+                              traverse(node.left, order)
+                        values.append(node.value)
+                        if node.right:
+                              traverse(node.right, order)
+                  if order == 'post-order':
+                        if node.right:
+                              traverse(node.right, order)
+                        values.append(node.value)
+                        if node.left:
+                              traverse(node.left, order)
+
+            traverse(self, order)
+            return values
+
+
+
+bst = BST(50)
+bst.insert(44)
+bst.insert(51)
+bst.insert(46)
+bst.insert(33)
+print(bst.listValues('post-order'))
