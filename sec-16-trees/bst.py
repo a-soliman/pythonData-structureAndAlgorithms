@@ -27,3 +27,8 @@ class BST(object):
                   return self.value
             return self.left.getSmallestValue()
       
+      def getGreatestValue(self):
+            if self.right == None:
+                  return self.value
+            return self.right.getGreatestValue()
+      
