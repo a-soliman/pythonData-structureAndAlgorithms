@@ -13,3 +13,12 @@ class BST(object):
                         newTree = BST(value)
                         self.left = newTree
 
+                  else:
+                        return self.left.insert(value)
+            else:
+                  if self.right == None:
+                        newTree = BST(value)
+                        self.right = newTree
+                  else:
+                        return self.right.insert
+      
