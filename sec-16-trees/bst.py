@@ -48,6 +48,12 @@ class BST(object):
                         values.append(node.value)
                         if node.left:
                               traverse(node.left, order)
+                  if order == 'pre-order':
+                        values.append(node.value)
+                        if node.left:
+                              traverse(node.left, order)
+                        if node.right:
+                              traverse(node.right, order)
 
             traverse(self, order)
             return values
@@ -59,4 +65,4 @@ bst.insert(44)
 bst.insert(51)
 bst.insert(46)
 bst.insert(33)
-print(bst.listValues('post-order'))
+print(bst.listValues('pre-order'))
